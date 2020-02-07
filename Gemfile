@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# ~NH~ added below for API CALLS
+gem 'httparty'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -42,12 +45,16 @@ gem 'faker'
 gem 'bootstrap-sass'
 gem 'sassc-rails'
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'figaro'
+  gem 'paperclip'
+  gem 'dotenv-rails'
 end
 
 group :development do

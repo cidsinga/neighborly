@@ -2,50 +2,210 @@
 @import "bootstrap";
 @import "main_styles";
 @import "button_styles";
+@import "driveby_small";
+@import "driveby_large";
+@import "form_styles";
+@import "car_styles";
+@import "nav_styles";
+@import url('https://fonts.googleapis.com/css?family=Neucha|Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*/
 
-body {
-  background-color: #3AAFA9;
+// Google Fonts
+// font-family: 'Neucha', cursive;
+// font-family: 'Sigmar One', cursive;
 
+// hex color pallete
+// #FEFFFF whiteish
+// #DEF2F1 less whiteish
+// #3AAFA9 background color turquoisy ish
+// #2B7A78 between turquoisy ish and black
+// #17252A black?
+
+body  {
+  background: radial-gradient(at 120% 0%, orange 10%, yellow 20%, #3AAFA9 50%);
+  height: 100vh;
+  background-attachment: fixed;
 }
 
-.nav_bar {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: green;
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  // background: rgb(2,0,36);
+  // background: linear-gradient(179deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(58,175,169,1) 75%, rgba(58,175,169,0.75) 100%);
+  width: 100vw;
+  height: 10vh;
+}
+
+.yield {
+  margin-top: 150px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 250px;
 }
 
 .welcome {
   // position: absolute;
   // top: 25%;
-  padding-top: 10%;
+  padding-top: 5%;
   overflow: hidden;
   // left: 25vw;
-  width: 100vw;
+  width: 100%;
   height: 80vh;
+  color: #DEF2F1;
+  text-shadow: 2px 2px black;
+  z-index: 999;
 }
 
 .welcome h1 {
   font-size: 120px;
   text-align: center;
+  font-family: 'Sigmar One', cursive;
 }
 
 .welcome h3 {
   text-align: center;
   font-size: 60px;
+  font-family: 'Neucha', cursive;
+}
 
+.emClass {
+  font-weight: bolder;
+}
+
+.flash_messages{
+  float: right;
+  font-size: 20pt;
+  // background-color: yellow;
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  z-index: 2;
+  // background: rgba(250, 250, 250, .75);
+  // margin: 10px;
+  // display: inline-block;
+  // border-radius: 5%;
+  // padding: 15px;
+  // border-style: outset;
+  // border-width: 2px;
+  // border-color: teal;
+}
+
+.card-columns {
+  padding-left: 19%;
+}
+
+.card {
+  background: rgba(250, 250, 250, .75);
+  margin: 10px;
+  width: 25%;
+  display: inline-block;
+  height: 310px;
+  border-radius: 5%;
+  padding: 15px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: teal;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Righteous', cursive;
+  // opacity: 0.7;
+}
+
+.card-title:hover {
+  font-size: 32px;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#individual_event_display {
+  height: 600px;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#individual_user_display {
+  height: 600px;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#all_user_display {
+  height: 600px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  padding-left: 40px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#center_forms {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#center_search {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+// #center_all_events {
+//   margin: 0;
+//   position: absolute;
+//   top: 30%;
+//   left: 50%;
+//   margin-right: -50%;
+//   transform: translate(-50%, -50%);
+// }
+
+.new_event_path {
+  position: fixed;
+  top: 150px;
+  left: 20px;
+  width: 200px;
+  height: 58px;
+  color: white;
 }
 
 .NBanner {
@@ -61,225 +221,175 @@ body {
 
 }
 
-.header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: rgb(2,0,36);
 
-  background: linear-gradient(179deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(58,175,169,1) 75%, rgba(58,175,169,0.75) 100%);
 
-  width: 100vw;
-  height: 10vh;
+/* BIRDS */
+.container {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // min-height: 100vh;
+  min-height: 35rem;
+  // background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%), url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center center;
+  padding: 2rem;
+}
+
+.bird {
+  overflow: hidden;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+
+  &--one {
+    animation-duration: 1s;
+    animation-delay: -0.5s;
+  }
+
+  &--two {
+    animation-duration: 0.9s;
+    animation-delay: -0.75s;
+  }
+
+  &--three {
+    animation-duration: 1.25s;
+    animation-delay: -0.25s;
+  }
+
+  &--four {
+    animation-duration: 1.1s;
+    animation-delay: -0.5s;
+  }
+
+}
+
+.bird-container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 40%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  &--one {
+    animation-duration: 15s;
+    animation-delay: 0;
+  }
+
+  &--two {
+    animation-duration: 16s;
+    animation-delay: 1s;
+  }
+
+  &--three {
+    animation-duration: 14.6s;
+    animation-delay: 9.5s;
+  }
+
+  &--four {
+    animation-duration: 16s;
+    animation-delay: 10.25s;
+  }
+
+}
+
+@keyframes fly-cycle {
+
+  100% {
+    background-position: -900px 0;
+  }
+
+}
+
+@keyframes fly-right-one {
+
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+
+}
+
+@keyframes fly-right-two {
+
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+
 }
 
 
-
-.driveby {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  height: 50vh;
-    /* max-height: 600px; */
-    width: 100vw;
-    // background-color: hsla(200,40%,30%,.4);
-    background-image:
-        // url('https://image.freepik.com/free-vector/urban-street-landscape-crossroads-traffic-lights_107791-373.jpg'),
-        // url('https://cdn.pixabay.com/photo/2017/01/23/16/35/home-2003068__340.png'),
-        // url('https://t2.rbxcdn.com/af0dcf2b210ff4bf9cde107f77b063d0'),
-        url('https://raw.githubusercontent.com/nhhor/neighborly/master/app/assets/images/road.png'),
-        url('https://inception-app-prod.s3.amazonaws.com/NDU4ODQ4NDItMTAwNC00NzIxLTkwZTMtZjExYmIyNzVkZThj/content/2017/10/neighborhood%20mini%20x3%20no%20bak.png'),
-        url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-        // url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
-        url('https://raw.githubusercontent.com/nhhor/neighborly/master/app/assets/images/hills.png'),
-        url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-    background-repeat: repeat-x;
-    background-position:
-        0 100%,
-        0 90%,
-        0 50%,
-        0 100%,
-        0 0;
-    background-size:
-        20%,
-        40%,
-        500px 200px,
-        1000px,
-        400px 260px;
-    animation: 50s para infinite linear;
-    }
-
-@keyframes para {
-    100% {
-        background-position:
-            -1200px 100%,
-            -800px 90%,
-            500px 50%,
-            1000px 100%,
-            400px 0;
-        }
-    }
-
-
-    /* BIRDS */
-    .container {
-     	z-index: 1;
-     	position: relative;
-     	overflow: hidden;
-     	display: flex;
-     	align-items: center;
-     	justify-content: center;
-     	// min-height: 100vh;
-     	min-height: 35rem;
-     	// background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%), url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
-     	background-blend-mode: soft-light;
-     	background-size: cover;
-     	background-position: center center;
-     	padding: 2rem;
-     }
-
-     .bird {
-     	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
-     	background-size: auto 100%;
-     	width: 88px;
-     	height: 125px;
-     	will-change: background-position;
-
-     	animation-name: fly-cycle;
-     	animation-timing-function: steps(10);
-     	animation-iteration-count: infinite;
-
-     	&--one {
-     		animation-duration: 1s;
-     		animation-delay: -0.5s;
-     	}
-
-     	&--two {
-     		animation-duration: 0.9s;
-     		animation-delay: -0.75s;
-     	}
-
-     	&--three {
-     		animation-duration: 1.25s;
-     		animation-delay: -0.25s;
-     	}
-
-     	&--four {
-     		animation-duration: 1.1s;
-     		animation-delay: -0.5s;
-     	}
-
-     }
-
-     .bird-container {
-     	position: absolute;
-     	bottom: 40%;
-     	left: -10%;
-     	transform: scale(0) translateX(-10vw);
-     	will-change: transform;
-
-     	animation-name: fly-right-one;
-     	animation-timing-function: linear;
-     	animation-iteration-count: infinite;
-
-     	&--one {
-     		animation-duration: 15s;
-     		animation-delay: 0;
-     	}
-
-     	&--two {
-     		animation-duration: 16s;
-     		animation-delay: 1s;
-     	}
-
-     	&--three {
-     		animation-duration: 14.6s;
-     		animation-delay: 9.5s;
-     	}
-
-     	&--four {
-     		animation-duration: 16s;
-     		animation-delay: 10.25s;
-     	}
-
-     }
-
-     @keyframes fly-cycle {
-
-     	100% {
-     		background-position: -900px 0;
-     	}
-
-     }
-
-     @keyframes fly-right-one {
-
-     	0% {
-     		transform: scale(0.3) translateX(-10vw);
-     	}
-
-     	10% {
-     		transform: translateY(2vh) translateX(10vw) scale(0.4);
-     	}
-
-     	20% {
-     		transform: translateY(0vh) translateX(30vw) scale(0.5);
-     	}
-
-     	30% {
-     		transform: translateY(4vh) translateX(50vw) scale(0.6);
-     	}
-
-     	40% {
-     		transform: translateY(2vh) translateX(70vw) scale(0.6);
-     	}
-
-     	50% {
-     		transform: translateY(0vh) translateX(90vw) scale(0.6);
-     	}
-
-     	60% {
-     		transform: translateY(0vh) translateX(110vw) scale(0.6);
-     	}
-
-     	100% {
-     		transform: translateY(0vh) translateX(110vw) scale(0.6);
-     	}
-
-     }
-
-     @keyframes fly-right-two {
-
-     	0% {
-     		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-     	}
-
-     	10% {
-     		transform: translateY(0vh) translateX(10vw) scale(0.4);
-     	}
-
-     	20% {
-     		transform: translateY(-4vh) translateX(30vw) scale(0.6);
-     	}
-
-     	30% {
-     		transform: translateY(1vh) translateX(50vw) scale(0.45);
-     	}
-
-     	40% {
-     		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
-     	}
-
-     	50% {
-     		transform: translateY(0vh) translateX(90vw) scale(0.45);
-     	}
-
-     	51% {
-     		transform: translateY(0vh) translateX(110vw) scale(0.45);
-     	}
-
-     	100% {
-     		transform: translateY(0vh) translateX(110vw) scale(0.45);
-     	}
-
-     }
+// .signInLink {
+//   z-index: 99;
+//   position: relative;
+// }

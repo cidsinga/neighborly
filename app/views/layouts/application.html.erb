@@ -7,10 +7,13 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <link rel="stylesheet" href="app/assets/stylesheets/styles.scss">
 </head>
 
 <body>
+
+
+
+
 
   <div class="header">
     <!-- Bird HTML -->
@@ -25,17 +28,31 @@
     <%= image_tag("neighborly_logo_house.png", class: "NBanner", alt: "Neighborly Logo") %>
 
     <div class="nav_bar">
-      <% if current_user %>
-      <h3>Welcome back, <%= current_user.user_email %> | <%= link_to "Sign out", '/signout', class: "btn btn-danger" %></h3>
-      <% else %>
-      <%= link_to "Sign up", signup_path, class: "btn btn-success" %> | <%= link_to "Sign in", '/signin', class: "btn btn-info" %>
-      <% end %>
+      <table>
+        <tr>
+          <th>
 
 
-      <a href="/events" class="btn btn-info">Events</a> | <%= render "layouts/search_form" %>
+          <% if current_user %>
+          <br><%= link_to "Sign out", '/signout', class: "nav_signout_button" %>  <a href="/events" class="nav_event_button">All Events</a>
+          <% else %>
+          <%= link_to "Sign up", signup_path, class: "nav_signup_button" %> <%= link_to "Sign in", '/signin', class: "nav_signin_button" %>
+          <% end %>
+
+
+        </th>
+        <th>
+
+          <% if session["user_id"] != nil %>
+          <%= render "layouts/search_form" %>
+          <% end %>
+          </th>
+        </tr>
+
+      </table>
     </div>
 
-    <br><br><br><br><br><br>
+
 
     <div class="flash_messages">
       <%= flash[:alert] %>
@@ -43,23 +60,18 @@
     </div>
 
   </div>
-    <br><br><br><br><br><br>
 
-
-
+  <div class="yield">
     <%= yield %>
+  </div>
 
 
-
-  <div class="driveby">
-    <!-- Bird HTML -->
-    <div class="bird-container bird-container--three">
-      <div class="bird bird--three"></div>
-    </div>
-    <div class="bird-container bird-container--four">
-      <div class="bird bird--four"></div>
-    </div>
-    <br>
+  <div>
+    <% if current_user %>
+    <%= render "layouts/driveby_small" %>
+    <% else %>
+    <%= render "layouts/driveby_large" %>
+    <% end %>
   </div>
 </body>
 </html>
